@@ -9,10 +9,11 @@ const supabase = createClient(
 let sort = 'created_at.desc';
 
 async function fetchArticles() {
+  const [field, dir] = sort.split('.');
   const { data, error } = await supabase
     .from('article')
     .select('*')
-    .order(...sort.split('.'));
+    .order(field, { ascending: dir === 'asc' });
 
   if (error) {
     console.error(error);
