@@ -6,7 +6,7 @@ const supabase = createClient(
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InprenJmdmt3eWhwZndlanF5YXdrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgzNTM5MzcsImV4cCI6MjA2MzkyOTkzN30.ZFIdFddIXtkhfJDeTeOfj888rQzJJIiLKNjCaHz6O-E'
 );
 
-let sort = 'created_at.desc';
+let sort = 'created_at.asc';
 
 async function fetchArticles() {
   const [field, dir] = sort.split('.');
