@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artykuły</title>
+  <link rel="stylesheet" href="src/style2.css" />
+  <script type="module" src="src/script.js"></script>
+</head>
+<body>
+  <h1>Lista artykułów</h1>
+
+  <select id="sort">
+    <option value="created_at.asc">Po dacie rosnąco</option>
+    <option value="created_at.desc">Po dacie malejąco</option>
+    <option value="title.asc">Po nazwie alfabetycznie</option>
+  </select>
+
+  <div id="articles"></div>
+
+  <h2>Dodaj nowy artykuł</h2>
+  <form id="article-form">
+    <input name="title" placeholder="Tytuł" required />
+    <input name="subtitle" placeholder="Podtytuł" required />
+    <input name="author" placeholder="Autor" required />
+    <textarea name="content" placeholder="Treść" required></textarea>
+    <input type="datetime-local" name="created_at" required />
+    <button type="submit">Dodaj artykuł</button>
+  </form>
+</body>
+</html>
